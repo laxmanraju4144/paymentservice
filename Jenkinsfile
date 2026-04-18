@@ -9,7 +9,7 @@ pipeline {
 
         stage('Git Checkout') {
             steps {
-                git url: 'https://github.com/QuntamVector/paymentservice.git', branch: 'main'
+                git url: 'https://github.com/laxmanraju4144/paymentservice.git', branch: 'main'
             }
         }
 
@@ -52,7 +52,7 @@ pipeline {
                             echo "gitops directory exists. Removing it..."
                             rm -rf gitops
                         fi
-                        git clone https://$GIT_USERNAME:$GIT_PASSWORD@github.com/QuntamVector/GitOps.git gitops
+                        git clone https://$GIT_USERNAME:$GIT_PASSWORD@github.com/laxmanraju4144/GitOps.git gitops
                         cd gitops/base/paymentservice/
 
                         git config user.email "jenkins@ci.com"
